@@ -1,6 +1,6 @@
 # Snippet Saver (Selection Saver — Chrome Extension)
 
-#### Video Demo:  
+#### Video Demo:  https://www.youtube.com/watch?v=bOK3E5mBkOQ&ab_channel=WajahatAli
 
 #### Description:
 
