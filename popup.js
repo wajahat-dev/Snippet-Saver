@@ -2,6 +2,53 @@ const saveBtn = document.getElementById("saveSelectionBtn");
 const clearAllBtn = document.getElementById("clearAllBtn");
 const itemsList = document.getElementById("itemsList");
 const emptyState = document.getElementById("emptyState");
+const exportBtn = document.getElementById("exportBtn");
+const importBtn = document.getElementById("importBtn");
+const importFile = document.getElementById("importFile");
+
+exportBtn.addEventListener("click", () => {
+  chrome.storage.local.get({ savedSelections: [] }, (data) => {
+    const blob = new Blob([JSON.stringify(data.savedSelections, null, 2)], {
+      type: "application/json"
+    });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "Snippet_Saver.json";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  });
+});
+
+// --- IMPORT ---
+importBtn.addEventListener("click", () => {
+  importFile.click();
+});
+
+importFile.addEventListener("change", () => {
+  const file = importFile.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    try {
+      const imported = JSON.parse(e.target.result);
+      if (!Array.isArray(imported)) {
+        alert("Invalid file format.");
+        return;
+      }
+      chrome.storage.local.set({ savedSelections: imported }, () => {
+        loadAndRender();
+        alert("Import successful!");
+      });
+    } catch (err) {
+      alert("Error parsing JSON file.");
+    }
+  };
+  reader.readAsText(file);
+});
 
 function renderItems(items) {
   itemsList.innerHTML = "";

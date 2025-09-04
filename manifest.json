@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "CS50 Selection Saver",
+  "name": "Snippet Saver",
   "description": "Save selected text to a list (popup + right-click).",
   "version": "1.0",
   "permissions": [

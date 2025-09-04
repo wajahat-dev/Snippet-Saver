@@ -2,7 +2,7 @@
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: "save-selection",
-    title: "Save selection to CS50 Saver",
+    title: "Save selection to Snippet Saver",
     contexts: ["selection"]
   });
 });

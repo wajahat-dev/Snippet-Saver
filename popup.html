@@ -1,25 +1,33 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Selection Saver</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1>Selection Saver</h1>
-        <div class="controls">
-          <button id="saveSelectionBtn">Save Selection</button>
-          <button id="clearAllBtn" title="Clear all saved items">Clear All</button>
-        </div>
-      </header>
-      <main>
-        <ul id="itemsList" class="items"></ul>
-        <div id="emptyState" class="empty">No saved items yet — select text on any page and click "Save Selection" or use the right-click menu.</div>
-      </main>
-    </div>
-    <script src="popup.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Snippet Saver</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Snippet Saver</h1>
+      <div class="controls">
+        <button id="saveSelectionBtn">Save Selection</button>
+        <button id="exportBtn">Export</button>
+        <button id="importBtn">Import</button>
+        <button id="clearAllBtn" title="Clear all saved items">Clear All</button>
+        <input type="file" id="importFile" accept="application/json" style="display:none" />
+      </div>
+    </header>
+
+    <main>
+      <ul id="itemsList" class="items"></ul>
+      <div id="emptyState" class="empty">No saved items yet — select text on any page and click "Save Selection" or use
+        the right-click menu.</div>
+    </main>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
 </html>

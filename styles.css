@@ -22,3 +22,10 @@ button:hover { filter: brightness(0.97); }
 .item .actions { display: flex; gap: 6px; }
 .action-btn { font-size: 12px; padding: 4px 6px; }
 .empty { color: #666; font-size: 13px; margin-top: 12px; }
+
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
