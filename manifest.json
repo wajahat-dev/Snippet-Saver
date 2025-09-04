@@ -1,23 +1,19 @@
 {
   "manifest_version": 3,
   "name": "Snippet Saver",
-  "description": "Save selected text to a list (popup + right-click).",
+  "description": "Save and manage text snippets from any webpage. Export and import your saved selections easily.",
   "version": "1.0",
+  "action": {
+    "default_popup": "popup.html"
+  },
   "permissions": [
     "storage",
-    "contextMenus",
     "activeTab",
-    "scripting"
+    "scripting",
+    "contextMenus"
   ],
   "background": {
     "service_worker": "background.js"
-  },
-  "action": {
-    "default_popup": "popup.html",
-    "default_title": "Selection Saver"
-  },
-  "icons": {
-   
   },
   "host_permissions": [
     "<all_urls>"
