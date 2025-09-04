@@ -27,9 +27,6 @@ This README explains what the project does, how to install and test it, the file
 - `popup.html` — The HTML for the popup shown when clicking the extension icon. Contains the UI skeleton: list of saved items and controls (Save Selection, Export, Import, Clear All).  
 - `popup.js` — Popup logic: loads stored snippets, renders the list, handles button actions (Save Selection via `chrome.scripting.executeScript`, Copy, Delete, Clear, Export, and Import). When you press **Save Selection** in the popup, the extension injects a small script into the active tab to read `window.getSelection()` and saves that text with the tab URL and timestamp.  
 - `styles.css` — Styling for the popup to keep the UI compact and clean.  
-- `icons/` — Placeholder icon files (`icon16.png`, `icon48.png`, `icon128.png`). Replace these with designed PNGs for publication.  
-- `cs50_extension_presentation.pptx` — A simple slide deck (intro + closing) you can use when recording your project video.  
-- `cs50_extension.zip` — Zip of the project (contains the files above).
 
 ---
 
