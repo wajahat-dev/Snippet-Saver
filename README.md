@@ -39,8 +39,8 @@ This README explains what the project does, how to install and test it, the file
 5. The extension icon will appear in the toolbar. Click it to open the popup.  
 6. To save text: navigate to any webpage, highlight some text, then either:  
    - Open the extension popup and click **Save Selection**, or  
-   - Right-click the highlighted text and choose **Save selection to CS50 Saver**.  
-7. Use **Export** to download `cs50_selections.json` (a standard JSON array of saved snippet objects). Use **Import** to restore from such a file.
+   - Right-click the highlighted text and choose **Save selection to Snippet Saver**.  
+7. Use **Export** to download `Snippet_Saver.json` (a standard JSON array of saved snippet objects). Use **Import** to restore from such a file.
 
 **Example JSON format (export):**
 
@@ -66,7 +66,6 @@ This README explains what the project does, how to install and test it, the file
 
 - Script injection is not allowed on some special pages (chrome:// pages, the Web Store, certain extension pages), so saving selections there will fail. This is a browser restriction, not a bug in the extension.  
 - The extension stores data locally only. There is no authentication or remote sync. Do not store sensitive personal data in the extension if you are concerned about local access.  
-- Icons in `icons/` are placeholders (empty files). Please replace them with properly sized PNGs for better UX.
 
 ---
 
@@ -83,7 +82,3 @@ This README explains what the project does, how to install and test it, the file
 ## License & Credits
 
 This project was created for the CS50 final project assignment. You are free to reuse the code for learning and personal projects. Suggested license: **MIT** (add `LICENSE` file to the repo if you want to publish).
-
----
-
-*If you’d like, I can also commit this README into the project zip and regenerate the zip file for download. Replace `<VIDEO_URL_HERE>` above with your final YouTube (or other hosting) URL once your screencast is uploaded.*
