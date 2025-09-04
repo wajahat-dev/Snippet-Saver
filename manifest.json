@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "CS50 Selection Saver",
+  "description": "Save selected text to a list (popup + right-click).",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Selection Saver"
+  },
+  "icons": {
+   
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
